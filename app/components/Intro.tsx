@@ -1,4 +1,3 @@
-import React from 'react';
 import Typography from './common/Typography';
 
 export default function Intro() {

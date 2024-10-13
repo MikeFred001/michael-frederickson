@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Divider({ reversed = false }: { reversed: boolean; }) {
+export default function Divider({ reversed = false }: { reversed?: boolean; }) {
   return (
     <div className={`relative w-full h-[100px] ${reversed ? 'bg-gray-200' : 'bg-gray-100'}`}>
       <div

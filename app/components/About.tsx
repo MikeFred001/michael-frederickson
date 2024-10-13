@@ -5,7 +5,7 @@ import ScalableImage from './common/ScalableImage';
 
 export default function About() {
   return (
-    <div className='ABOUT flex flex-col px-12'>
+    <div className='ABOUT flex flex-col px-12 bg-gray-200'>
       <Typography className='text-6xl'>About</Typography>
       <div className='flex justify-between gap-12'>
         <Typography>
