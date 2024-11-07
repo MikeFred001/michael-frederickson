@@ -3,7 +3,7 @@ import Typography from './common/Typography';
 
 export default function Nav() {
   return (
-    <nav className='NAV flex justify-between w-[16rem] bg-green-300'>
+    <nav className='NAV flex justify-between w-[16rem]'>
       <Link href='#home'>
         <Typography>Home</Typography>
       </Link>

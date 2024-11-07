@@ -1,13 +1,13 @@
 "use client";
 
-import Image from 'next/image';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Divider from './components/common/Divider';
 import About from './components/About';
 import FooterContacts from './components/FooterContacts';
 import { useState, useEffect } from 'react';
-import { useScroll, useWindowScroll } from 'react-use';
+import { useWindowScroll } from 'react-use';
+
 
 export default function Home() {
   const { y } = useWindowScroll();

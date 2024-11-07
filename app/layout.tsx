@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
+import { Bebas_Neue } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-bebas-neue",
+});
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -26,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bebasNeue.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

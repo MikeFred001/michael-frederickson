@@ -1,17 +1,24 @@
 import Image, { ImageProps } from 'next/image';
-import { FC } from 'react';
 
 
-const ScalableImage: FC<ScalableImageProps> = ({
+export default function ScalableImage({
   className = '',
   containerClassName = '',
   src,
   alt = '',
+  width,
+  height,
   isLoading = false,
   ...props
-}) => {
+}: ScalableImageProps) {
   return (
-    <div className={`relative ${containerClassName}`}>
+    <div
+      className={`relative ${containerClassName}`}
+      style={{
+        width: width ? `${width}px` : 'auto',
+        height: height ? `${height}px` : 'auto',
+      }}
+    >
       <img
         src={src}
         alt={alt}
@@ -26,10 +33,8 @@ const ScalableImage: FC<ScalableImageProps> = ({
 interface ScalableImageProps extends Omit<ImageProps, 'src' | 'loading'> {
   className?: string;
   containerClassName?: string;
-  skrimClassName?: string;
   isLoading?: boolean;
   src: string;
+  width?: number;
+  height?: number;
 }
-
-export default ScalableImage;
-
