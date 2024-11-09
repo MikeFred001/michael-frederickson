@@ -4,11 +4,11 @@ import ScalableImage from './common/ScalableImage';
 
 export default function About() {
   return (
-    <div className='ABOUT flex w-full justify-center bg-gray-200'>
-      <div className='flex gap-4 p-12 lg:px-40 bg-red-300'>
+    <div id='about' className='ABOUT flex w-full justify-center bg-gray-200'>
+      <div className='flex justify-between w-[55rem]'>
         <div className='flex flex-col gap-2'>
-          <Typography className='text-6xl'>About</Typography>
-          <Typography className='max-w-[30rem] text-[1.3rem]'>
+          <Typography className='text-[6rem] text-shadow-red2 font-semibold'>About</Typography>
+          <Typography className='max-w-[30rem] text-[1.325rem] text-justify'>
             Hi, I'm Mike. I'm a software engineer, people person, and lifetime nerd. I specialize in building responsive, custom web apps using tech like React, Next.js, PostgreSQL, and more.
             I made the leap into tech in 2020 because I simply like creating cool stuff. Especially when it works well and looks good.
             Most recently I worked at Vital Time Tech where I helped build everything from
@@ -20,10 +20,9 @@ export default function About() {
           </Typography>
         </div>
         <ScalableImage
-          src="/about1.png"
-          alt="Nerdy programmer guy"
-          containerClassName='maxw-[32rem]'
-          width={300}
+          src='/about1.png'
+          alt='Nerdy programmer guy'
+          width={370}
         />
       </div>
     </div>

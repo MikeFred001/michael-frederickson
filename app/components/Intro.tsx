@@ -2,12 +2,16 @@ import Typography from './common/Typography';
 
 export default function Intro() {
   return (
-    <div className='INTRO h-screen flex flex-col justify-center gap-3'>
+    <div className='INTRO h-screen flex flex-col justify-center gap-3 font-semibold text-[6rem]'>
       <div className='flex flex-col self-center'>
-        <Typography className='text-6xl'>Hi, I'm Mike.</Typography>
-        <Typography className='text-6xl'>I'm a Web Developer</Typography>
+        <Typography className='leading-none'>
+          Hi, I'm <span className='text-mred text-shadow-black2'>Mike</span>
+        </Typography>
+        <Typography className='leading-none'>
+          I'm a Web Developer.
+        </Typography>
       </div>
-      <div className='h-1 bg-red-400 w-[90vw]' />
+      <div className='h-[5px] -mt-3 bg-mred w-[90vw]' />
     </div>
   );
 }
