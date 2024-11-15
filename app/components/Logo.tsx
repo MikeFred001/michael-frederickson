@@ -3,7 +3,7 @@ export default function Logo(
   { width, height }: { width: number, height: number; }
 ) {
   return (
-    <div className='LOGO outline-2 outline-mred'
+    <div className='LOGO outline-2 outline-mred transition-all duration-300'
       style={{ width: `${width}px`, height: `${height}px` }}
     >
       <svg className='LOGO w-full h-full'

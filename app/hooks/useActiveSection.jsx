@@ -14,7 +14,7 @@ export function useActiveSection(sections) {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: [0.25, 0.5, 0.75] }
     );
 
     validSections.forEach((section) => observer.observe(section));

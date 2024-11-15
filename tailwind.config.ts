@@ -24,7 +24,10 @@ const config: Config = {
         black2: '6px 5px 1px black',
         red1: '3px 2px 1px #FF5050',
         red2: '6px 5px 1px #FF5050',
-      }
+      },
+      boxShadow: {
+        custom1: '3px 3px 15px 3px rgba(0, 0, 0, 0.5)',
+      },
     },
   },
   plugins: [
