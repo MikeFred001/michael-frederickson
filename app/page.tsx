@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Intro from './components/Intro';
 import About from './components/About';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 import Divider from './components/common/Divider';
 import FooterContacts from './components/FooterContacts';
 import { useState, useEffect, useRef } from 'react';
@@ -54,7 +55,7 @@ export default function Home() {
     <div className='HOME font-bebas'>
       <Header activeSection={activeSection} miniHeader={miniHeader} />
 
-      <div id='home' ref={homeRef} className='h-screen flex flex-col justify-center gap-3 font-semibold text-[6rem]'>
+      <div id='home' ref={homeRef} className='h-screen flex flex-col justify-center gap-3 font-semibold text-[8rem]'>
         <Intro />
         <div className='h-[5px] -mt-3 bg-mred w-[90vw]' />
       </div>
@@ -72,6 +73,10 @@ export default function Home() {
       </div>
 
       <Divider />
+
+      <div id='contact' ref={contactRef} className='flex w-full py-10 px-[8rem] bg-gray-200'>
+        <Contact />
+      </div>
 
       <FooterContacts className={hideFooter ? 'opacity-0 pointer-events-none' : ''} />
     </div>

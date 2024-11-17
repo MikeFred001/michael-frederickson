@@ -12,6 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         mred: '#FF5050',
+        red: '#FF0000',
       },
       fontFamily: {
         bebas: ['var(--font-bebas-neue)', 'sans-serif'],
@@ -22,6 +23,7 @@ const config: Config = {
       textShadow: {
         black1: '3px 2px 1px black',
         black2: '6px 5px 1px black',
+        black3: '9px 8px 1px black',
         red1: '3px 2px 1px #FF5050',
         red2: '6px 5px 1px #FF5050',
       },
