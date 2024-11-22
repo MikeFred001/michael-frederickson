@@ -1,41 +1,51 @@
-import Link from 'next/link';
-import Typography from './common/Typography';
+import Link from "next/link";
+import Typography from "./common/Typography";
 
-export default function Nav({ activeSection, miniHeader }: { activeSection: string; miniHeader: boolean; }) {
+export default function Nav({
+  activeSection,
+  miniHeader,
+}: {
+  activeSection: string;
+  miniHeader: boolean;
+}) {
   const styling = {
-    default: `${miniHeader ? 'text-[1.5rem]' : 'text-[2rem]'} hover:scale-110 active:text-mred transition-all duration-300`,
-    active: 'text-mred text-shadow-black1',
-    mini: 'text-[1.25rem] w-[19rem]'
+    default: `${miniHeader ? "text-[1.5rem]" : "text-[2rem]"} hover:scale-110 active:text-mred transition-all duration-300`,
+    active: "text-mred text-shadow-black1",
+    mini: "text-[1.25rem] w-[19rem]",
   };
 
-  console.log('ACTIVE SECTION', activeSection);
-
   return (
-    <nav className={`
-        NAV flex justify-between font-semibold transition-all duration-300
-        ${miniHeader ? styling.mini : 'w-[23rem] text-[2rem]'}
-      `}
+    <nav
+      className={`NAV flex justify-between font-semibold transition-all duration-300 ${miniHeader ? styling.mini : "w-[23rem] text-[2rem]"} `}
     >
-      <Link href='#home'>
-        <Typography className={`${styling.default} ${activeSection === 'home' ? styling.active : ''}`}>
+      <Link href="#home">
+        <Typography
+          className={`${styling.default} ${activeSection === "home" ? styling.active : ""}`}
+        >
           Home
         </Typography>
       </Link>
 
-      <Link href='#about'>
-        <Typography className={`${styling.default} ${activeSection === 'about' ? styling.active : ''}`}>
+      <Link href="#about">
+        <Typography
+          className={`${styling.default} ${activeSection === "about" ? styling.active : ""}`}
+        >
           About
         </Typography>
       </Link>
 
-      <Link href='#projects'>
-        <Typography className={`${styling.default} ${activeSection === 'projects' ? styling.active : ''}`}>
+      <Link href="#projects">
+        <Typography
+          className={`${styling.default} ${activeSection === "projects" ? styling.active : ""}`}
+        >
           Projects
         </Typography>
       </Link>
 
-      <Link href='#contact'>
-        <Typography className={`${styling.default} ${activeSection === 'contact' ? styling.active : ''}`}>
+      <Link href="#contact">
+        <Typography
+          className={`${styling.default} ${activeSection === "contact" ? styling.active : ""}`}
+        >
           Contact
         </Typography>
       </Link>

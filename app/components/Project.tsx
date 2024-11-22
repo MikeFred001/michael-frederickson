@@ -1,15 +1,24 @@
-import React from 'react';
-import Typography from './common/Typography';
-import ProjectCard from './ProjectCard';
+import Typography from "./common/Typography";
+import ProjectCard from "./ProjectCard";
 
-export default function Project({ project }: { project: IProjectProps; }) {
+export default function Project({ project }: { project: IProjectProps }) {
   return (
-    <div className='PROJECT flex flex-wrap'>
-      <Typography className='text-[3.25rem] w-full font-semibold leading-none'>{project.title}</Typography>
-      <Typography className='text-[2.25rem] text-mred w-full font-semibold leading-none mb-2'>{project.subtitle}</Typography>
-      <div className='flex gap-10'>
-        <ProjectCard imageUrl={project.imageUrl} videoUrl={project.videoUrl} techStack={project.techStack} />
-        <Typography className='text-[1.5rem] text-justify leading-[1.4] font-semibold'>{project.description}</Typography>
+    <div className="PROJECT flex flex-wrap">
+      <Typography className="w-full text-[3.25rem] font-semibold leading-none">
+        {project.title}
+      </Typography>
+      <Typography className="mb-2 w-full text-[2.25rem] font-semibold leading-none text-mred">
+        {project.subtitle}
+      </Typography>
+      <div className="flex gap-10">
+        <ProjectCard
+          imageUrl={project.imageUrl}
+          videoUrl={project.videoUrl}
+          techStack={project.techStack}
+        />
+        <Typography className="text-justify text-[1.5rem] font-semibold leading-[1.4]">
+          {project.description}
+        </Typography>
       </div>
     </div>
   );

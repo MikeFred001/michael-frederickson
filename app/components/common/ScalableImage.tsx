@@ -1,11 +1,10 @@
-import Image, { ImageProps } from 'next/image';
-
+import Image, { ImageProps } from "next/image";
 
 export default function ScalableImage({
-  className = '',
-  containerClassName = '',
+  className = "",
+  containerClassName = "",
   src,
-  alt = '',
+  alt = "",
   width,
   height,
   isLoading = false,
@@ -15,22 +14,22 @@ export default function ScalableImage({
     <div
       className={`relative ${containerClassName}`}
       style={{
-        width: width ? `${width}px` : 'auto',
-        height: height ? `${height}px` : 'auto',
+        width: width ? `${width}px` : "auto",
+        height: height ? `${height}px` : "auto",
       }}
     >
       <img
         src={src}
         alt={alt}
-        className={`object-cover w-full h-full ${className}`}
-        style={{ objectFit: 'cover' }}
+        className={`h-full w-full object-cover ${className}`}
+        style={{ objectFit: "cover" }}
         {...props}
       />
     </div>
   );
-};
+}
 
-interface ScalableImageProps extends Omit<ImageProps, 'src' | 'loading'> {
+interface ScalableImageProps extends Omit<ImageProps, "src" | "loading"> {
   className?: string;
   containerClassName?: string;
   isLoading?: boolean;

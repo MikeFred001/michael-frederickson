@@ -1,16 +1,15 @@
 "use client";
 
-import Header from './components/Header';
-import Intro from './components/Intro';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Divider from './components/common/Divider';
-import FooterContacts from './components/FooterContacts';
-import { useState, useEffect, useRef } from 'react';
-import { useWindowScroll } from 'react-use';
-import { useActiveSection } from './hooks/useActiveSection';
-
+import Header from "./components/Header";
+import Intro from "./components/Intro";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Divider from "./components/common/Divider";
+import FooterContacts from "./components/FooterContacts";
+import { useState, useEffect, useRef } from "react";
+import { useWindowScroll } from "react-use";
+import { useActiveSection } from "./hooks/useActiveSection";
 
 export default function Home() {
   const { y } = useWindowScroll();
@@ -29,7 +28,7 @@ export default function Home() {
       homeRef.current,
       aboutRef.current,
       projectsRef.current,
-      contactRef.current
+      contactRef.current,
     ]);
   }, []);
 
@@ -52,33 +51,49 @@ export default function Home() {
   }, [y, miniHeader]);
 
   return (
-    <div className='HOME font-bebas'>
+    <div className="HOME font-bebas">
       <Header activeSection={activeSection} miniHeader={miniHeader} />
 
-      <div id='home' ref={homeRef} className='h-screen flex flex-col justify-center gap-3 font-semibold text-[8rem]'>
+      <div
+        id="home"
+        ref={homeRef}
+        className="flex h-screen flex-col justify-center gap-3 text-[8rem] font-semibold"
+      >
         <Intro />
-        <div className='h-[5px] -mt-3 bg-mred w-[90vw]' />
+        <div className="-mt-3 h-[5px] w-[90vw] bg-mred" />
       </div>
 
       <Divider />
 
-      <div id='about' ref={aboutRef} className='flex w-full justify-center bg-gray-200'>
+      <div
+        id="about"
+        ref={aboutRef}
+        className="flex w-full justify-center bg-gray-200"
+      >
         <About />
       </div>
 
       <Divider reversed />
 
-      <div id='projects' ref={projectsRef} className='flex w-full py-10 px-[8rem]'>
+      <div
+        id="projects"
+        ref={projectsRef}
+        className="flex w-full px-[8rem] py-10"
+      >
         <Projects />
       </div>
 
       <Divider />
 
-      <div id='contact' ref={contactRef} className='flex w-full py-10 px-[8rem] bg-gray-200'>
+      <div
+        id="contact"
+        ref={contactRef}
+        className="flex w-full bg-gray-200 px-[8rem] py-10"
+      >
         <Contact />
       </div>
 
-      <FooterContacts className={hideFooter ? 'opacity-0 pointer-events-none' : ''} />
+      <FooterContacts hideFooter={hideFooter} />
     </div>
   );
 }
