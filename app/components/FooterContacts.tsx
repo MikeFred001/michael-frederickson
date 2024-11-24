@@ -10,7 +10,7 @@ export default function FooterContacts({
   const [phoneCopied, setPhoneCopied] = useState(false);
 
   const contactStyle =
-    "text-center cursor-pointer text-2xl font-semibold transition-all duration-200 text-mred hover:text-black hover:text-shadow-red1 flex-1";
+    "block flex-1 cursor-pointer text-center text-2xl font-semibold text-mred transition-all duration-200 hover:text-black hover:text-shadow-red1";
 
   const contactInfo = {
     email: "mpfplus@gmail.com",
@@ -33,31 +33,39 @@ export default function FooterContacts({
     <div
       className={`FOOTER-CONTACTS fixed bottom-0 flex w-full justify-between px-28 py-6 transition-all duration-300 ${hideFooter ? "pointer-events-none opacity-0" : ""}`}
     >
-      <Typography className={contactStyle} onClick={copyPhoneNum}>
-        {phoneCopied ? "COPIED!" : contactInfo.phone}
-      </Typography>
+      <div className="flex flex-1 justify-center">
+        <Typography className={contactStyle} onClick={copyPhoneNum}>
+          {phoneCopied ? "COPIED!" : contactInfo.phone}
+        </Typography>
+      </div>
 
-      <Link href={`mailto:${contactInfo.email}`} passHref className="flex-1">
-        <Typography className={contactStyle}>{contactInfo.email}</Typography>
-      </Link>
+      <div className="flex flex-1 justify-center">
+        <Link href={`mailto:${contactInfo.email}`} passHref className="block">
+          <Typography className={contactStyle}>{contactInfo.email}</Typography>
+        </Link>
+      </div>
 
-      <Link
-        target="_blank"
-        href={contactInfo.linkedIn}
-        rel="noopener noreferrer"
-        className="flex-1"
-      >
-        <Typography className={contactStyle}>LinkedIn</Typography>
-      </Link>
+      <div className="flex flex-1 justify-center">
+        <Link
+          target="_blank"
+          href={contactInfo.linkedIn}
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <Typography className={contactStyle}>LinkedIn</Typography>
+        </Link>
+      </div>
 
-      <Link
-        target="_blank"
-        href={contactInfo.github}
-        rel="noopener noreferrer"
-        className="flex-1"
-      >
-        <Typography className={contactStyle}>GitHub</Typography>
-      </Link>
+      <div className="flex flex-1 justify-center">
+        <Link
+          target="_blank"
+          href={contactInfo.github}
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <Typography className={contactStyle}>GitHub</Typography>
+        </Link>
+      </div>
     </div>
   );
 

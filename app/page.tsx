@@ -53,46 +53,13 @@ export default function Home() {
   return (
     <div className="HOME font-bebas">
       <Header activeSection={activeSection} miniHeader={miniHeader} />
-
-      <div
-        id="home"
-        ref={homeRef}
-        className="flex h-screen flex-col justify-center gap-3 text-[8rem] font-semibold"
-      >
-        <Intro />
-        <div className="-mt-3 h-[5px] w-[90vw] bg-mred" />
-      </div>
-
+      <Intro ref={homeRef} />
       <Divider />
-
-      <div
-        id="about"
-        ref={aboutRef}
-        className="flex w-full justify-center bg-gray-200"
-      >
-        <About />
-      </div>
-
+      <About ref={aboutRef} />
       <Divider reversed />
-
-      <div
-        id="projects"
-        ref={projectsRef}
-        className="flex w-full px-[8rem] py-10"
-      >
-        <Projects />
-      </div>
-
+      <Projects ref={projectsRef} />
       <Divider />
-
-      <div
-        id="contact"
-        ref={contactRef}
-        className="flex w-full bg-gray-200 px-[8rem] py-10"
-      >
-        <Contact />
-      </div>
-
+      <Contact ref={contactRef} />
       <FooterContacts hideFooter={hideFooter} />
     </div>
   );

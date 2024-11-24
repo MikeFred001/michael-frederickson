@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 
-export default function Contact() {
+export default function Contact({ ref }: { ref: any }) {
   const [phoneCopied, setPhoneCopied] = useState(false);
 
   const contactInfo = {
@@ -27,33 +27,39 @@ export default function Contact() {
   }, [phoneCopied]);
 
   return (
-    <div className="CONTACT w-[74rem] pb-20">
-      <Typography className="mb-4 text-[6rem] font-semibold text-shadow-red2">
-        Contact Me
-      </Typography>
-      <div className="flex flex-grow justify-between">
-        <PhoneButton
-          icon={faMobileAlt}
-          label="phone"
-          onClick={copyPhoneNum}
-          phoneCopied={phoneCopied}
-        />
-        <ContactButton
-          icon={faEnvelope}
-          label="email"
-          href={`mailto:${contactInfo.email}`}
-        />
-        <ContactButton
-          icon={faLinkedin}
-          label="linkedin"
-          href={contactInfo.linkedIn}
-        />
-        <ContactButton
-          icon={faGithub}
-          label="github"
-          href={contactInfo.github}
-        />
-        <ResumeButton />
+    <div
+      id="contact"
+      ref={ref}
+      className="CONTACT flex w-full bg-gray-200 px-[8rem] py-10"
+    >
+      <div className="w-[74rem] pb-20">
+        <Typography className="mb-4 text-[6rem] font-semibold text-shadow-red2">
+          Contact Me
+        </Typography>
+        <div className="flex flex-grow justify-between">
+          <PhoneButton
+            icon={faMobileAlt}
+            label="phone"
+            onClick={copyPhoneNum}
+            phoneCopied={phoneCopied}
+          />
+          <ContactButton
+            icon={faEnvelope}
+            label="email"
+            href={`mailto:${contactInfo.email}`}
+          />
+          <ContactButton
+            icon={faLinkedin}
+            label="linkedin"
+            href={contactInfo.linkedIn}
+          />
+          <ContactButton
+            icon={faGithub}
+            label="github"
+            href={contactInfo.github}
+          />
+          <ResumeButton />
+        </div>
       </div>
     </div>
   );

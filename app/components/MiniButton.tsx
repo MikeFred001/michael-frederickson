@@ -24,7 +24,7 @@ export default function MiniButton({
         className="rounded-full bg-white p-4 text-red"
       />
       <Typography
-        className={`absolute bottom-4 left-[18px] w-11 text-center text-[.9rem] font-semibold leading-none text-white opacity-0 transition-all duration-200 ${hover ? "translate-y-[10px] opacity-100" : ""}`}
+        className={`absolute bottom-4 w-11 text-center text-[.9rem] font-semibold leading-none text-white opacity-0 transition-all duration-200 ${hover ? "translate-y-[10px] opacity-100" : ""}`}
       >
         {label}
       </Typography>

@@ -3,33 +3,39 @@ import Project from "./Project";
 import Typography from "./common/Typography";
 import projects from "../data/projects.json";
 
-export default function Projects() {
+export default function Projects({ ref }: { ref: any }) {
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(slideInProject, []);
 
   return (
-    <div className="PROJECTS w-full pb-10">
-      <Typography className="mb-10 text-[6rem] font-semibold text-shadow-red2">
-        Projects
-      </Typography>
-      <div className="flex flex-col gap-[12rem]">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            ref={(el) => {
-              projectRefs.current[index] = el;
-            }}
-            className={`transform transition-all duration-[700ms] ${
-              visibleIndexes.includes(index)
-                ? "translate-x-0 opacity-100"
-                : "translate-x-[-50px] opacity-0"
-            }`}
-          >
-            <Project project={project} />
-          </div>
-        ))}
+    <div
+      id="projects"
+      ref={ref}
+      className="PROJECTS flex w-full px-[8rem] py-10"
+    >
+      <div className="w-full pb-10">
+        <Typography className="mb-10 text-[6rem] font-semibold text-shadow-red2">
+          Projects
+        </Typography>
+        <div className="flex flex-col gap-[12rem]">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              ref={(el) => {
+                projectRefs.current[index] = el;
+              }}
+              className={`transform transition-all duration-[700ms] ${
+                visibleIndexes.includes(index)
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-[-50px] opacity-0"
+              }`}
+            >
+              <Project project={project} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
