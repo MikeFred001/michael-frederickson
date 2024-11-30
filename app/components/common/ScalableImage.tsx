@@ -1,5 +1,3 @@
-import Image, { ImageProps } from "next/image";
-
 export default function ScalableImage({
   className = "",
   containerClassName = "",
@@ -7,7 +5,6 @@ export default function ScalableImage({
   alt = "",
   width,
   height,
-  isLoading = false,
   ...props
 }: IScalableImageProps) {
   return (
@@ -29,11 +26,12 @@ export default function ScalableImage({
   );
 }
 
-interface IScalableImageProps extends Omit<ImageProps, "src" | "loading"> {
+interface IScalableImageProps {
   className?: string;
   containerClassName?: string;
   isLoading?: boolean;
   src: string;
   width?: number;
   height?: number;
+  alt?: string;
 }

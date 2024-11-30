@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
 import { faSearch, faDownload } from "@fortawesome/free-solid-svg-icons";
 import Typography from "./common/Typography";
 import MiniButton from "./MiniButton";
