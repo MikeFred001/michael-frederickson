@@ -9,7 +9,7 @@ export default function ProjectTitles({
       <Typography className="w-fit text-[2rem] font-semibold leading-none lg:text-[3.25rem]">
         {title}
       </Typography>
-      <Typography className="mb-2 w-fit text-[1.5rem] font-semibold leading-none text-mred lg:text-[2.25rem]">
+      <Typography className="mb-2 w-fit text-[1.4rem] font-semibold leading-none text-mred lg:text-[2.25rem]">
         {subtitle}
       </Typography>
     </div>
