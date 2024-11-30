@@ -9,12 +9,14 @@ export default function Intro({ ref }: { ref: any }) {
     >
       <div className="ml-6 flex animate-fadeIn flex-col self-center">
         <Typography className="leading-none">
-          Hi, I\'m{" "}
+          Hi, I&#39;m{" "}
           <span className="text-mred text-shadow-black2 lg:text-shadow-black3">
             Mike
           </span>
         </Typography>
-        <Typography className="leading-none">I\'m a Web Developer.</Typography>
+        <Typography className="leading-none">
+          I&#39;m a Web Developer.
+        </Typography>
       </div>
       <div className="flex h-[5px]">
         <div className="h-[5px] w-[90%] animate-grow bg-mred" />
