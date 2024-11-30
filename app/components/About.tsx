@@ -10,7 +10,7 @@ export default function About({ ref }: { ref: any }) {
     >
       <div className="flex w-auto justify-between px-4 py-10 lg:w-[74rem]">
         <div className="flex flex-col lg:gap-2">
-          <Typography className="text-shadow-red3 text-[4rem] font-semibold leading-tight lg:text-[6rem] lg:text-shadow-red2">
+          <Typography className="text-[4rem] font-semibold leading-tight text-shadow-red3 lg:text-[6rem] lg:text-shadow-red2">
             About
           </Typography>
           <Typography className="max-w-[48rem] text-justify text-[1rem] font-semibold lg:text-[1.6rem]">
