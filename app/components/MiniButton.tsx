@@ -7,7 +7,8 @@ export default function MiniButton({
   icon,
   label,
   download = false,
-}: MiniButtonProps) {
+  iconClassName,
+}: IMiniButtonProps) {
   const [hover, setHover] = useState(false);
 
   return (
@@ -15,25 +16,28 @@ export default function MiniButton({
       href="/assets/resume.pdf"
       target={"_blank"}
       download={download ? "" : undefined}
-      className="MINI-BUTTON z-10 flex h-full flex-col items-center justify-center text-[2.5rem] text-red transition-all duration-200 hover:-translate-y-3"
+      className="MINI-BUTTON z-10 flex h-full flex-col items-center justify-center text-[2.5rem] text-red transition-all duration-200 lg:hover:-translate-y-3"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       <FontAwesomeIcon
         icon={icon}
-        className="rounded-full bg-white p-4 text-red"
+        className={`rounded-full bg-white p-4 text-red ${iconClassName}`}
       />
-      <Typography
-        className={`absolute bottom-4 w-11 text-center text-[.9rem] font-semibold leading-none text-white opacity-0 transition-all duration-200 ${hover ? "translate-y-[10px] opacity-100" : ""}`}
-      >
-        {label}
-      </Typography>
+      {label && (
+        <Typography
+          className={`absolute bottom-4 w-11 text-center text-[.9rem] font-semibold leading-none text-white transition-all duration-200 ${hover ? "lg:translate-y-[10px] lg:opacity-100" : "opacity-0"}`}
+        >
+          {label}
+        </Typography>
+      )}
     </Link>
   );
 }
 
-interface MiniButtonProps {
+interface IMiniButtonProps {
   icon: any;
-  label: string;
+  label?: string;
   download?: boolean;
+  iconClassName?: string;
 }

@@ -8,12 +8,12 @@ export default function About({ ref }: { ref: any }) {
       ref={ref}
       className="ABOUT flex w-full justify-center bg-gray-200"
     >
-      <div className="flex w-[74rem] justify-between py-10">
-        <div className="flex flex-col gap-2">
-          <Typography className="text-[6rem] font-semibold leading-tight text-shadow-red2">
+      <div className="flex w-auto justify-between px-4 py-10 lg:w-[74rem]">
+        <div className="flex flex-col lg:gap-2">
+          <Typography className="text-shadow-red3 text-[4rem] font-semibold leading-tight lg:text-[6rem] lg:text-shadow-red2">
             About
           </Typography>
-          <Typography className="max-w-[48rem] text-justify text-[1.6rem] font-semibold">
+          <Typography className="max-w-[48rem] text-justify text-[1rem] font-semibold lg:text-[1.6rem]">
             Hi, I'm Mike. I'm a software engineer, people person, and lifetime
             nerd. I specialize in building responsive, custom web apps using
             tech like React, Next.js, PostgreSQL, and more. I made the leap into
@@ -34,6 +34,7 @@ export default function About({ ref }: { ref: any }) {
           src="/images/about1.png"
           alt="Nerdy programmer guy"
           className="rounded-xl"
+          containerClassName="hidden lg:block"
           width={360}
         />
       </div>

@@ -11,7 +11,7 @@ export default function Nav({
   const styling = {
     default: `${miniHeader ? "text-[1.5rem]" : "text-[2rem]"} hover:scale-110 active:text-mred transition-all duration-300`,
     active: "text-mred text-shadow-black1",
-    mini: "text-[1.25rem] w-[19rem]",
+    mini: "text-[1.1rem] w-[17rem] lg:text-[1.25rem] lg:w-[19rem]",
   };
 
   return (

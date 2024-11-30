@@ -10,7 +10,7 @@ export default function FooterContacts({
   const [phoneCopied, setPhoneCopied] = useState(false);
 
   const contactStyle =
-    "block flex-1 cursor-pointer text-center text-2xl font-semibold text-mred transition-all duration-200 hover:text-black hover:text-shadow-red1";
+    "hidden lg:block flex-1 cursor-pointer text-center text-2xl font-semibold text-mred transition-all duration-200 hover:text-black hover:text-shadow-red1";
 
   const contactInfo = {
     email: "mpfplus@gmail.com",

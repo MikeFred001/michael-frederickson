@@ -9,7 +9,7 @@ export default function ResumeButton() {
     "group relative flex size-[175px] cursor-pointer items-center justify-center whitespace-pre rounded-full border-2 border-gray-200 bg-mred p-6 outline outline-[5px] outline-black transition-all duration-300 hover:w-[300px] hover:bg-red hover:outline-[8px]";
 
   return (
-    <div className="RESUME-BUTTON flex flex-col items-center gap-[6px]">
+    <div className="RESUME-BUTTON hidden flex-col items-center gap-[6px] lg:flex">
       <div className={btnClasses}>
         <FontAwesomeIcon
           icon={faFileAlt}

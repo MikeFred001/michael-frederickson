@@ -52,7 +52,16 @@ export default function Home() {
 
   return (
     <div className="HOME font-bebas">
-      <Header activeSection={activeSection} miniHeader={miniHeader} />
+      <Header
+        activeSection={activeSection}
+        miniHeader={miniHeader}
+        className={"hidden lg:flex"}
+      />
+      <Header
+        activeSection={activeSection}
+        miniHeader={true}
+        className={"flex lg:hidden"}
+      />
       <Intro ref={homeRef} />
       <Divider />
       <About ref={aboutRef} />

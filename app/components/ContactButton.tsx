@@ -8,17 +8,17 @@ export default function ContactButton({
   href,
   onClick,
   phoneCopied,
-}: ContactProps) {
+}: IContactProps) {
   const mainClasses =
     "flex justify-center items-center whitespace-pre bg-mred border-2 border-gray-200 outline outline-[5px] outline-black rounded-full p-6 transition-all duration-300 hover:bg-red hover:outline-[8px]";
 
   return (
     <div
-      className="CONTACT-BUTTON flex flex-col items-center gap-[6px]"
+      className="CONTACT-BUTTON mb-4 flex flex-col items-center gap-[6px]"
       onClick={onClick}
     >
       <Link target="_blank" href={href || ""}>
-        <div className={`size-[175px] ${mainClasses}`}>
+        <div className={`size-[135px] lg:size-[175px] ${mainClasses}`}>
           {phoneCopied ? (
             <Typography className="text-[2rem]">COPIED!</Typography>
           ) : (
@@ -31,7 +31,7 @@ export default function ContactButton({
   );
 }
 
-interface ContactProps {
+interface IContactProps {
   icon: any;
   label: string;
   href?: string;

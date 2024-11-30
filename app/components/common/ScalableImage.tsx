@@ -9,7 +9,7 @@ export default function ScalableImage({
   height,
   isLoading = false,
   ...props
-}: ScalableImageProps) {
+}: IScalableImageProps) {
   return (
     <div
       className={`relative ${containerClassName}`}
@@ -29,7 +29,7 @@ export default function ScalableImage({
   );
 }
 
-interface ScalableImageProps extends Omit<ImageProps, "src" | "loading"> {
+interface IScalableImageProps extends Omit<ImageProps, "src" | "loading"> {
   className?: string;
   containerClassName?: string;
   isLoading?: boolean;

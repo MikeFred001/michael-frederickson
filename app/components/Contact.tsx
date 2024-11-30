@@ -2,6 +2,7 @@ import Typography from "./common/Typography";
 import ContactButton from "./ContactButton";
 import PhoneButton from "./PhoneButton";
 import ResumeButton from "./ResumeButton";
+import ResumeButtonMobile from "./ResumeButtonMobile";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
@@ -30,13 +31,13 @@ export default function Contact({ ref }: { ref: any }) {
     <div
       id="contact"
       ref={ref}
-      className="CONTACT flex w-full bg-gray-200 px-[8rem] py-10"
+      className="CONTACT flex w-full bg-gray-200 px-8 pb-0 pt-16 lg:px-4 lg:py-16"
     >
-      <div className="w-[74rem] pb-20">
-        <Typography className="mb-4 text-[6rem] font-semibold text-shadow-red2">
+      <div className="mx-auto w-full pb-10 lg:w-[74rem]">
+        <Typography className="text-shadow-red3 mb-4 text-[4rem] font-semibold lg:text-[6rem] lg:text-shadow-red2">
           Contact Me
         </Typography>
-        <div className="flex flex-grow justify-between">
+        <div className="flex flex-wrap justify-between">
           <PhoneButton
             icon={faMobileAlt}
             label="phone"
@@ -59,6 +60,7 @@ export default function Contact({ ref }: { ref: any }) {
             href={contactInfo.github}
           />
           <ResumeButton />
+          <ResumeButtonMobile />
         </div>
       </div>
     </div>
