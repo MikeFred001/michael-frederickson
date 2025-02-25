@@ -16,7 +16,7 @@ export default function Projects({ ref }: { ref: any }) {
       className="PROJECTS flex w-full px-4 py-10 lg:py-10"
     >
       <div className="mx-auto pb-10">
-        <Typography className="text-shadow-red3 mb-10 text-[4rem] font-semibold leading-tight lg:text-[6rem] lg:text-shadow-red2">
+        <Typography className="mb-10 text-[4rem] font-semibold leading-tight text-shadow-red3 lg:text-[6rem] lg:text-shadow-red2">
           Projects
         </Typography>
         <div className="flex flex-col gap-[8rem] lg:gap-[12rem]">

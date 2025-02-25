@@ -37,4 +37,6 @@ interface IProjectCardProps {
   videoUrl?: string;
   imageUrl?: string;
   techStack: string[];
+  githubLink?: string;
+  demoLink?: string;
 }

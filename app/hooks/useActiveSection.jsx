@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export function useActiveSection(sections) {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const validSections = sections.filter((section) => section instanceof HTMLElement);
+    const validSections = sections.filter(
+      (section) => section instanceof HTMLElement,
+    );
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -14,7 +16,7 @@ export function useActiveSection(sections) {
           }
         });
       },
-      { threshold: [0.25, 0.5, 0.75] }
+      { threshold: 0.1 },
     );
 
     validSections.forEach((section) => observer.observe(section));
